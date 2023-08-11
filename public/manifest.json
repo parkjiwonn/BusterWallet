@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "BusterWallet",
+    "description": "This is our sample extension",
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icononly_transparent_nobuffer.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+      },
+      "permissions": [
+        "tabs"
+      ],
+      "content_scripts": [
+        {
+          "matches": ["http://localhost:5174/"],
+          "js": ["content.js"]
+        }
+      ]
+     
+    
+}
